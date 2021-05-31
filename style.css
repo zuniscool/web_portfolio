@@ -552,8 +552,8 @@ p {
   #navbar {
     flex-direction: column; /* 로고와 메뉴를 세로로 정렬 */
     align-items: flex-start; /* 끝 부분으로 이동 */
-    background-color: transparent;
-    padding: 20px 0 20px 16px;
+    background-color: var(--color-blue);
+    padding: 20px 0 20px 20px;
     transition: none;
   }
 
@@ -567,6 +567,13 @@ p {
     text-align: center;
     width: 100%;
     display: none;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    background-color: var(--color-blue);
+    padding: 30px 0;
+    /* transition: all var(--animation-duration) ease;
+    transform: translateY(40px); */
   }
 
   .navbar__menu.open {
