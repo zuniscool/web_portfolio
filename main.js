@@ -1,5 +1,24 @@
 "use strict";
 
+// If click toogle btn, switch 'jobs' or 'inputs'
+const jobsBtn = document.querySelector('.tab_jobs-btn');
+const inputsBtn = document.querySelector('.tab_input-btn');
+const jobs = document.querySelector('.about__jobs');
+const inputs = document.querySelector('.about__inputs');
+jobsBtn.addEventListener('click', () => {
+  jobs.classList.remove('display-none');
+  jobsBtn.classList.add('clicked');
+  inputsBtn.classList.remove('clicked');
+  inputs.style.display = 'none';
+});
+inputsBtn.addEventListener('click', () => {
+  jobs.classList.add('display-none');
+  jobsBtn.classList.remove('clicked');
+  inputsBtn.classList.add('clicked');
+  inputs.style.display = 'block';
+});
+
+
 // Make navbar transparent when it is on the top
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
