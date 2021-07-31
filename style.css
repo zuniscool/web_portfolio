@@ -127,12 +127,8 @@ p {
   font-weight: var(--weight-semi-bold);
 }
 
-.navbar__logo img {
-  width: 30px;
-}
-
-.navbar__logo a {
-  color: inherit;
+.navbar__title {
+  color: var(--color-white);
 }
 
 .navbar__menu__item {
@@ -151,7 +147,7 @@ p {
 .navbar__menu__item:hover {
   border: 1px solid var(--color-black);
   border-radius: 5px;
-  background-color: var(--color-light-grey);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .navbar__toggle-btn {
@@ -169,7 +165,7 @@ p {
 }
 
 .home__container {
-  background: url(imgs/home-background.png) center/cover no-repeat;
+  background-color: var(--color-light-grey);
   padding: var(--section-padding);
   padding-top: 120px;
 }
@@ -186,22 +182,6 @@ p {
   transform: scale(1.2);
 }
 
-.home__contact {
-  font-size: var(--font-regular);
-  font-weight: var(--weight-bold);
-  margin: 24px;
-  padding: var(--btn-padding);
-  border: 2px solid var(--color-light-grey);
-  border-radius: var(--size-border-radius);
-  background-color: rgba(0, 0, 0, 0.3);
-  transition: all var(--animation-duration) ease;
-}
-
-.home__contact:hover {
-  background-color: var(--color-light-grey);
-  transform: scale(1.1);
-}
-
 /* About */
 #about {
   padding: var(--section-padding);
@@ -212,13 +192,17 @@ p {
   text-align: left;
 }
 
+.strong {
+  color: var(--color-blue);
+}
+
 .about__tab-btns {
   display: none;
 }
 
-.about__job_box {
+.about__inner_box {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .about__jobs,
@@ -226,12 +210,15 @@ p {
   padding-top: var(--section-padding);
 }
 
+.about__jobs {
+  width: 270px;
+}
+
 .about__inputs {
   display: flex;
 }
 
-.job,
-.input {
+.job {
   display: flex;
 }
 
@@ -243,8 +230,23 @@ p {
   padding-right: 10px;
 }
 
+.input1,
+.input2 {
+  width: 270px;
+}
+
 .input__name {
   font-weight: var(--weight-semi-bold);
+}
+
+.input__name:hover {
+  font-size: 0;
+}
+
+.input__name:hover:after {
+  color: var(--color-blue);
+  font-size: var(--font-regular);
+  content: '기록 보기';
 }
 
 /* Skills */
@@ -486,49 +488,6 @@ p {
   background-color: var(--color-white);
 }
 
-/* Testimonials */
-/* #testimonials {
-  text-align: center;
-  background-color: var(--color-light-white);
-  padding: var(--section-padding);
-}
-
-.testimonial {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-}
-
-.testimonial__avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-
-.testimonial__avatar:nth-child(odd) {
-  margin-right: 20px;
-}
-
-.testimonial__avatar:nth-child(even) {
-  margin-left: 20px;
-}
-
-.testimonial__speech-bubble {
-  text-align: left;
-  background-color: var(--color-dark-white);
-  padding: 24px;
-  border-radius: var(--size-border-radius);
-}
-
-.testimonial__speech-bubble .name {
-  text-align: center;
-  color: var(--color-blue);
-}
-
-.testimonial__speech-bubble .name a {
-  color: var(--color-black);
-} */
-
 /* Contact */
 #contact {
   text-align: center;
@@ -629,8 +588,6 @@ p {
     left: 0;
     background-color: var(--color-blue);
     padding: 30px 0;
-    /* transition: all var(--animation-duration) ease;
-    transform: translateY(40px); */
   }
 
   .navbar__menu.open {
@@ -657,6 +614,7 @@ p {
     background-color: var(--color-grey);
     border-radius: var(--size-border-radius);
     color: var(--color-white);
+    font-size: var(--font-micro);
   }
 
   .clicked {
