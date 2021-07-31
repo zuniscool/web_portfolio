@@ -525,6 +525,11 @@ p {
   color: var(--color-blue);
 }
 
+.contact__readme:hover {
+  transition: all 300ms ease-in;
+  transform: scale(1.1);
+}
+
 /* Arrow */
 .arrow-btn {
   position: fixed;
