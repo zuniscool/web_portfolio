@@ -95,6 +95,7 @@ p {
   font-weight: var(--weight-regular);
   color: var(--color-black);
   margin: 4px 0;
+  text-indent: 10px;
 }
 
 /* Navbar */
@@ -267,6 +268,13 @@ p {
   margin-top: 20px;
 }
 
+.skillset__title {
+  margin-bottom: 40px;
+  padding: 4px 0;
+  border: 1px solid var(--color-dark-grey);
+  border-radius: var(--size-border-radius);
+}
+
 .skillset__left {
   flex-basis: 60%; /* flexbox 안에서 차지하는 비율 */
   background-color: var(--color-dark-white);
@@ -290,9 +298,17 @@ p {
 }
 
 .skill__value {
-  /* 각 skill마다 값이 다르므로, html에서 style 적용 */
   height: 3px;
   background-color: var(--color-orange);
+}
+
+.skill__list {
+  text-align: left;
+}
+
+.skill__list li {
+  padding-bottom: 4px;
+  list-style: circle;
 }
 
 .skillset__right {
@@ -301,13 +317,52 @@ p {
 }
 
 .tools {
+  height: 100%;
   background-color: var(--color-light-white);
-  border-radius: 0 var(--size-border-radius) 0 0;
+  border-radius: 0 var(--size-border-radius) var(--size-border-radius) 0;
+  padding: 20px;
+  align-items: center;
 }
 
-.tools,
-.etc {
-  padding: 20px;
+.tools__list {
+}
+
+.tools__list__lists {
+  margin-bottom: 8%;
+}
+
+.lists__content {
+  position: relative;
+  display: inline-block;
+  width: 30%;
+  transition: transform var(--animation-duration) ease-in;
+}
+
+.lists__content:hover {
+  transform: scale(1.2);
+}
+
+.lists__content:hover span {
+  display: block;
+}
+
+.lists__content img {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.lists__content span {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--color-white);
+  width: 100%;
+  padding: 4px;
+  border-radius: var(--size-border-radius);
+  transform: translate(-50%, -50%);
 }
 
 /* Work */
