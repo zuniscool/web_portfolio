@@ -212,37 +212,22 @@ p {
   text-align: left;
 }
 
-.about__majors {
+.about__job_box {
   display: flex;
-  justify-content: space-between; /* space-between은 좌우 컨텐츠가 끝으로 붙으면서 가운데 정렬 됨. */
-  align-items: center;
+  justify-content: space-around;
+}
+
+.about__jobs,
+.about__input {
   padding-top: var(--section-padding);
 }
 
-.major__icon {
-  width: 170px; /* 아이콘 컨테이너 크기 */
-  height: 170px;
-  line-height: 170px; /* 수직 정렬(1줄만 가능) */
-  font-size: 70px; /* 아이콘 크기 */
-  margin: auto;
-  color: var(--color-blue);
-  border: 1px solid var(--color-blue);
-  border-radius: 50%; /* 동그라미 보더 */
+.about__input {
+  display: flex;
 }
 
-.major__icon i {
-  transition: all var(--animation-duration) ease;
-}
-
-.major__icon:hover i {
-  transform: rotate(-24deg) scale(1.2);
-}
-
-.about__jobs {
-  padding-top: var(--section-padding);
-}
-
-.job {
+.job,
+.input {
   display: flex;
 }
 
@@ -252,6 +237,10 @@ p {
 
 .job__logo {
   padding-right: 10px;
+}
+
+.input__name {
+  font-weight: var(--weight-semi-bold);
 }
 
 /* Skills */
@@ -494,7 +483,7 @@ p {
 }
 
 /* Testimonials */
-#testimonials {
+/* #testimonials {
   text-align: center;
   background-color: var(--color-light-white);
   padding: var(--section-padding);
@@ -534,7 +523,7 @@ p {
 
 .testimonial__speech-bubble .name a {
   color: var(--color-black);
-}
+} */
 
 /* Contact */
 #contact {
@@ -556,7 +545,11 @@ p {
   color: var(--color-black);
 }
 
-.contact__links a:hover i {
+.contact__links img {
+  width: 38px;
+}
+
+.contact__links a:hover img {
   transition: all var(--animation-duration) ease;
   transform: scale(1.1);
 }
